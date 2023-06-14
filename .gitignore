@@ -47,3 +47,10 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Matlab 
+.mat 
+
+# Other data format
+.csv
+
