@@ -26,7 +26,7 @@ This repository is an extension of https://github.com/haipai/CDL2gssurgo which i
 
 1. A[Counties]: a shape file with your interested spatial units. Here, we use US counties as the example.
 2. B[Rasterized Counties]: a geoTIFF raster file with the same spatial reference as C[CDLs] and snapped (the cells in B and C are aligned with the same corner coordinates).
-3. C[CDLs]: downloaded raste CDLs.
+3. C[CDLs]: downloaded raste CDLs and converted to netCDF to support regional reading of data. 
 4. D[gSSURGO]: converted netCDF file from gSSURGO_CONUS_202210.gdb.
 5. E[Stacked Matrices]: a set of Matlab Matrices, such as county matrix, each year's CDL matrix, and the soil matrix from D[gSSURGO]. Depending on the research objectives, if the goal is to work at field level (CDL cells), the data compiling work should stop at this step. For summary analysis, such as want to know soil conditions by crop by county in each year, F[Final Output] is needed. 
 6. F[Final Output]: a dataframe in the long format includes crop, soil at each county in each year. The dataframe looks like: [County],[Year],[Crop],[SoilMapkey],[Area].
@@ -36,4 +36,5 @@ Since I have not find efficient Matlab function to rasterize shapefiles, to expo
 1. cropsoilloop.m - iterating over spatial units in A[Counties]
    Since the file size of CDLs, gSSURGO with 30 meter spatial resolution is large in the order of 10 - 50GB, it is hardly for a usual Office PC to have large enough memories to handle the data manipulation work at once. Thus, this script breaks down the work by iterating spatial units one by one. For large number of spatial units, like in the order of several hundred thousands or even millions. Twisting this script to work over a group of spatial units each time (cropsoilpart.m) is needed to save time. 
 2. cropsoilpart.m - working with a group of spatial units each time
+3. cropsoil.m - working with all spatial units at once if there are enough RAM. 
 
