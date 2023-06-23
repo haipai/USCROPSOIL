@@ -36,5 +36,5 @@ Since I have not find efficient Matlab function to rasterize shapefiles, to expo
 1. cropsoilloop.m - iterating over spatial units in A[Counties]
    Since the file size of CDLs, gSSURGO with 30 meter spatial resolution is large in the order of 10 - 50GB, it is hardly for a usual Office PC to have large enough memories to handle the data manipulation work at once. Thus, this script breaks down the work by iterating spatial units one by one. For large number of spatial units, like in the order of several hundred thousands or even millions. Twisting this script to work over a group of spatial units each time (cropsoilpart.m) is needed to save time. 
 2. cropsoilpart.m - working with a group of spatial units each time
-3. cropsoil.m - working with all spatial units at once if there are enough RAM. 
+3. cropsoil.m - working with all spatial units at once if there are enough RAM. My PC can not perform this task.
 
