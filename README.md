@@ -45,5 +45,5 @@ Since I have not find efficient Matlab function to rasterize shapefiles, to expo
 
 # Comments
 
-1. I haven't tested spaital units other than county and HUC8
+1. I haven't tested spatial units other than county and HUC8
 
