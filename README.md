@@ -42,6 +42,7 @@ Since I have not find efficient Matlab function to rasterize shapefiles, to expo
    Since the file size of CDLs, gSSURGO with 30 meter spatial resolution is large in the order of 10 - 50GB, it is hardly for a usual Office PC to have large enough memories to handle the data manipulation work at once. Thus, this script breaks down the work by iterating spatial units one by one. For large number of spatial units, like in the order of several hundred thousands or even millions. Twisting this script to work over a group of spatial units each time (cropsoilpart.m) is needed to save time. 
 2. cropsoilpart.m - working with a group of spatial units each time. Particularly, scanning the lower 48 states like a satellite from west to east.  The funny part is it may take less time by cropsoilloop.m. 
 3. cropsoil.m - working with all spatial units at once if there are enough RAM. My PC can not perform this task.
+4. cropsoilloophuc8.m - iterating over spatial units of HUC8, the netcdf (.NC) is converted from polygon feature WBDHU8 in WBD.gdb (Data Downloading 4). 
 
 # Comments
 
